@@ -19,4 +19,14 @@ if(chute == numero_secreto):
 else:
     print("O número secreto era:", numero_secreto,", mas você digitou:",chute)
 
-print("Fim do jogo")
+print("Fim do jogo", end="\n\n\n\n\n")
+
+var_1 = 10
+var_2 = "20"
+var_3 = "30"
+
+print(var_1 + int(var_2), end="\n")
+print(var_1 * var_2, end="\n")
+print(var_2 + var_3, end="\n")
+print(var_2,var_3, end="\n")
+
