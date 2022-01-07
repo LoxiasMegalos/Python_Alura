@@ -58,3 +58,55 @@ print()
 
 nome = "MATEUS"
 print(f"Meu nome é {nome.lower()}")
+print()
+
+#RANDOM - NUMEROS ALEATORIOS
+
+import random
+print(random.random())
+x = random.random()*100
+print(x)
+print(int(x))
+print(round(x), end="\n")
+print()
+
+i = 0
+while(i != 10):
+    random.seed(51421233)
+    aleatorio = random.randrange(0,4)
+    print(aleatorio)
+    i = i + 1
+
+print()
+
+# entendendo funcionalidades python
+
+round(3.5)
+round(4.5)
+
+z = 3 / 2
+print(z)
+z = 7 // 2
+print(z)
+print()
+
+#FUNÇÕES
+
+def oi_mundo():
+    print("Oi Mundo!")
+    print()
+
+oi_mundo()
+oi_mundo()
+oi_mundo()
+
+numero_1 = int(input("Qual o primeiro Numero: "))
+numero_2 = int(input("Qual o segundo Numero: "))
+
+def soma(a, b):
+    #c = a + b
+    return a + b
+
+
+print(soma(numero_1,numero_2))
+

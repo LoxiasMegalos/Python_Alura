@@ -1,4 +1,4 @@
-#Alura_aula_3_curso_1_Python
+#Alura_aula_4_curso_1_Python
 #If e While
 
 print("*******************************************", end="\n")
