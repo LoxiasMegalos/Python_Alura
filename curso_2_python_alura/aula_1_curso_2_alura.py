@@ -1,0 +1,1 @@
+print("Este é o primeiro programa do segundo curso de Python da Alura - avançando na linguagem")
