@@ -1,5 +1,3 @@
-
-
 def selecionar(nivel):
     x = 0
     print("Selecione o nível de dificuldade: ")
@@ -7,6 +5,12 @@ def selecionar(nivel):
     while (x != 1):
         nivel = int(input("Defina o nivel: "))
         if (nivel == 1 or nivel == 2 or nivel == 3):
+            if(nivel==1):
+                print("VOCÊ SELECIONOU A DIFICULDADE FACIL!")
+            elif (nivel == 2):
+                print("VOCÊ SELECIONOU A DIFICULDADE MÉDIA!")
+            else:
+                print("VOCÊ SELECIONOU A DIFICULDADE DIFÍCIL!")
             x = 1
         else:
             print("SELECIONE UM NIVEL DE DIFICULDADE VALIDO!")

@@ -12,7 +12,7 @@ def adv():
     total_de_rodadas = Nivel.selecionar(nivel)
     numero_secreto = random.randrange(1, 101)
     pontos = 1000
-    print(numero_secreto)
+    #print(numero_secreto)
 
     for rodada in range(1, total_de_rodadas + 1):
         print("Rodada {} de {}".format(rodada, total_de_rodadas))

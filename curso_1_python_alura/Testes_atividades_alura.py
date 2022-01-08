@@ -18,7 +18,6 @@ print("Em {} o Carnaval acontece em {} do dia {} até o dia {}".format(ano, mes,
 print()
 
 #For
-
 contador_w = 1
 while(contador_w <= 10):
     print(contador_w, end="\n")
@@ -72,7 +71,7 @@ print()
 
 i = 0
 while(i != 10):
-    random.seed(51421233)
+    random.seed(1) #51421233
     aleatorio = random.randrange(0,4)
     print(aleatorio)
     i = i + 1
