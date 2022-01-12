@@ -149,3 +149,42 @@ print()
 dicionario_letras = {"a" : "b", "c" : "d", "e" : "f"}
 print(dicionario_letras["a"])
 print()
+
+#TOTAL DE CARACTERES EM UM LOOP
+
+total = 0
+palavra = "Python rocks!"
+acabou = False
+print(len(palavra))
+while(not acabou):
+    acabou = (total == len(palavra))
+    total = total + 1
+
+print(total - 1)
+
+passos = 0
+while (passos <= 9):
+    passos += 1
+print(passos)
+
+frutas = ["maçã", "banana", "laranja", "melancia"]
+print(frutas)
+frutas_c = [fruta.upper() for fruta in frutas]
+print(frutas_c)
+
+inteiros = [1,3,4,5,7,8]
+print(inteiros)
+
+quadrados = [ inteiro*inteiro for inteiro in inteiros]
+print(quadrados)
+
+inteiros = [1,3,4,5,7,8,9]
+print(inteiros)
+pares = [ n for n in inteiros if n % 2 == 0]
+print(pares)
+
+#ARQUIVOS
+
+with open("palavras.txt") as arquivo:
+    for linha in arquivo:
+        print(linha.strip())

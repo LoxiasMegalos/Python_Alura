@@ -3,18 +3,20 @@
 def forca():
     print("JOGANDO FORCA!")
 
-    palavra_secreta = "banana".upper()
-    letras_acertadas = ["_","_","_","_","_","_"]
+    palavra_secreta = "fruta do conde".upper()
+    letras_acertadas = ["_" if letra != " " else " " for letra in palavra_secreta]
+
     acertou = False
     enforcou = False
     limite = len(palavra_secreta)
     erros = 0
+
     print(letras_acertadas)
 
     while(not acertou and not enforcou):
+
         chute = input("Digite uma letra: ")
         chute = chute.strip().upper()
-
 
         if(chute in palavra_secreta):
             index = 0
@@ -24,8 +26,10 @@ def forca():
                 index += 1
         else:
             erros += 1
-            print("Você ainda tem {} tentativas antes morrer".format(limite-erros))
-        print(letras_acertadas)
+
+            if(limite-erros != 0):
+                print("Você ainda tem {} tentativas antes morrer".format(limite-erros))
+
 
         #enforcou = erros == limite
         #acertou = "_" not in letras_acertadas
@@ -33,6 +37,8 @@ def forca():
 
         if(letras_acertadas.count("_") == 0 or erros == limite):
             break
+        print(letras_acertadas)
+
             #acertou = True
     if(acertou):
         print("PARABENS! VOCÊ GANHOU")
