@@ -9,6 +9,7 @@ class Conta:
         self.__titular = titular
         self.__saldo = saldo
         self.__limite = limite
+        #self.__codigo_banco = "001"
 
     def deposita(self, valor):
         self.__saldo += valor
@@ -52,3 +53,9 @@ class Conta:
     def limite(self, valor):
         self.__limite = valor
 
+    @staticmethod
+    def codigos_bancos():
+        return {'BB':'001', 'Caixa':'104', 'Bradesco':'237'}
+
+class Pi:
+    PI = 3.14
