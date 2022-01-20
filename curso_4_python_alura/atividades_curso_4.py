@@ -1,9 +1,6 @@
 class Pessoa:
     tamanho_cpf = 11
 
-
-
-
 p = Pessoa()
 
 print(p.tamanho_cpf)
@@ -31,3 +28,58 @@ print(pe.valida_cpf())
 print()
 pe = Pessoa('0000000000', 'Cristal')
 print(pe.valida_cpf())
+
+print("*********************************************************")
+#HERANÇAS!
+class Veiculo:
+
+    def __init__(self, nome):
+        print("Deu certo")
+        self._nome = nome
+
+    def abastecer(self, litros):
+        print("Abasteceu {} Litros".format(litros))
+
+
+class Carro(Veiculo):
+    def __init__(self, nome):
+        self._nome = nome
+    #def abastecer(self, litros):
+        #pass
+
+class Moto(Veiculo):
+    def __init__(self, nome, motoboy = "joão"):
+        super().__init__(nome)
+        self._motoboy = motoboy
+
+    @property
+    def motoboy(self):
+        return self._motoboy
+
+Hornet = Moto("Hornet")
+Hornet.abastecer(15)
+print(Hornet.motoboy)
+
+print()
+
+Peugeot = Veiculo("Pejô")
+Peugeot.abastecer(12)
+
+print()
+
+class Funcionario:
+    prefixo = 'Instrutor'
+
+    @classmethod
+    def info(cls):
+        return print(f'Esse é um {cls.prefixo}')
+
+
+Funcionario.info()
+
+class FolhaDePagamento:
+    @staticmethod
+    def log():
+        return print(f'Isso é um log qualquer')
+
+FolhaDePagamento.log()

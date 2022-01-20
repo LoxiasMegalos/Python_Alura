@@ -12,7 +12,7 @@ def jogar ():
 
     acertou = False
     enforcou = False
-    limite = len(palavra_secreta)
+    #limite = len(palavra_secreta)
     erros = 0
 
     while(not acertou and not enforcou):

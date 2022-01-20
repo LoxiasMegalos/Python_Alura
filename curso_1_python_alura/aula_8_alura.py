@@ -11,7 +11,7 @@ def jogar():
     print("*******************************************")
 
     total_de_rodadas = 0
-    numero_secreto = 99 #random.randrange(1,101)
+    numero_secreto = random.randrange(1,101)
     pontos = 1000
 
     print("ESCOLHA O NIVEL DO JOGO")

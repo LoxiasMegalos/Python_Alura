@@ -1,7 +1,8 @@
 
+import random
 banana = []
 
-arquivo = open("../curso_2_python_alura/batata.txt", "r")
+arquivo = open("batata.txt", "r")
 
 for linha in arquivo:
     banana.append(linha.upper().strip())
@@ -18,3 +19,14 @@ print(oculos)
 
 celular = ["te amo" if fruta == "MORANGO" else "*" for fruta in banana]
 print(celular)
+
+random.seed(1)
+numero = random.randrange(0, len(banana))
+palavra = banana[numero]
+print(palavra)
+
+
+v = []
+for letra in palavra:
+    v.append(letra.lower())
+print(v)
