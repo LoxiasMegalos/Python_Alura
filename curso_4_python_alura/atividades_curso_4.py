@@ -83,3 +83,9 @@ class FolhaDePagamento:
         return print(f'Isso é um log qualquer')
 
 FolhaDePagamento.log()
+
+print()
+
+lista = [1, 2, 4, 5]
+
+print(repr(lista))
