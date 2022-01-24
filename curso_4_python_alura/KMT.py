@@ -10,6 +10,7 @@ class KMT:
         self.__sup = sup
 
 
+
     def imprime_time(self):
         print("Time: {}".format(self.__nome))
         print("Top: {}".format(self.__top))
@@ -53,13 +54,11 @@ class KMT:
         else:
             return False
 
-
     def selecione_mvp(self, nome):
         if(self.__verifica_jogador(nome)):
             print("{} é o MVP!".format(nome))
         else:
             print("Jogador não encontrado")
-
 
 class Conta:
 
@@ -111,3 +110,35 @@ class Conta:
     @limite.setter
     def limite(self, valor):
         self.__limite = valor
+
+
+class Jogadores():
+
+    def __init__(self, jogador):
+        self.jogador = jogador
+
+    def __str__(self):
+        return self.jogador
+
+    def __eq__(self, other):
+        return self.jogador == other.jogador
+
+yang = Jogadores("Yang")
+zeeq = Jogadores("Zeeq")
+
+meus_jogadores = [yang, zeeq]
+
+for jogador in meus_jogadores:
+    print(jogador)
+
+
+def tenho_jogador(jogador):
+    #for player in meus_jogadores:
+        #if jogador == player:
+            #return True
+    #return False
+    return jogador in meus_jogadores
+
+
+jogador_procurado = Jogadores("Zetty")
+print(tenho_jogador(jogador_procurado))
