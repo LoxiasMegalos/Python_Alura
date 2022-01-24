@@ -90,42 +90,43 @@ class Playlist:
         self._playlist.extend(other)
 
 
+if(__name__ == "__main__"):
 
-v = Filmes("vingadores", 2018, 120)
-t = Series("Better Call Saul", 2015, 3)
+    v = Filmes("vingadores", 2018, 120)
+    t = Series("Better Call Saul", 2015, 3)
 
-for x in range(0,32):
-    t.dar_likes()
-    v.dar_likes()
+    for x in range(0,32):
+        t.dar_likes()
+        v.dar_likes()
 
-Play = [v, t]
+    Play = [v, t]
 
-#for programa in Play:
-    #print(programa)
+    #for programa in Play:
+        #print(programa)
 
-playlist_teste = Playlist("teste", Play)
+    playlist_teste = Playlist("teste", Play)
 
-print(len(playlist_teste))
-#print(len(playlist_teste))
+    print(len(playlist_teste))
+    #print(len(playlist_teste))
 
-for programa in playlist_teste:
-    print(programa)
+    for programa in playlist_teste:
+        print(programa)
 
-#print(t in playlist_teste)
-#print(playlist_teste[0])
-#print(t in playlist_teste)
+    #print(t in playlist_teste)
+    #print(playlist_teste[0])
+    #print(t in playlist_teste)
 
-#v.verifica_filme()
+    #v.verifica_filme()
 
-#v.hora_de_inicio()
+    #v.hora_de_inicio()
 
-#v.agradecimento()
-print()
+    #v.agradecimento()
+    print()
 
-y = Series("Better Call murillo", 2015, 2)
-playlist_teste.__add__([y])
+    y = Series("Better Call murillo", 2015, 2)
+    playlist_teste.__add__([y])
 
-for p in playlist_teste:
-    print(p)
+    for p in playlist_teste:
+        print(p)
 
 

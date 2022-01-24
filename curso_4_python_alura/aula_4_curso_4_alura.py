@@ -87,36 +87,37 @@ class Playlist:
     def tamanho(self):
         return len(self._programas)
 
+if(__name__ == "__main__"):
 
-vingadores = Filmes("vingadores o fim do mundo", 2019, 120)
-peakyblinders = Series("peaky blinders", 2015, 5)
-tmep = Filmes("todo mundo em panico", 1999, 100)
-demolidor = Series("demolidor", 2016, 2)
+    vingadores = Filmes("vingadores o fim do mundo", 2019, 120)
+    peakyblinders = Series("peaky blinders", 2015, 5)
+    tmep = Filmes("todo mundo em panico", 1999, 100)
+    demolidor = Series("demolidor", 2016, 2)
 
-for i in range(0,10):
-    vingadores.dar_likes()
+    for i in range(0,10):
+        vingadores.dar_likes()
 
-for i in range(0,13):
-    tmep.dar_likes()
+    for i in range(0,13):
+        tmep.dar_likes()
 
-for i in range(0,16):
-    demolidor.dar_likes()
+    for i in range(0,16):
+        demolidor.dar_likes()
 
-y = 0
-c = 0
-while(y == 0):
-    peakyblinders.dar_likes()
-    c += 1
-    if(c == 32):
-        y = random.randint(1, 1000)
+    y = 0
+    c = 0
+    while(y == 0):
+        peakyblinders.dar_likes()
+        c += 1
+        if(c == 32):
+            y = random.randint(1, 1000)
 
-filmes_e_series = [vingadores, peakyblinders, tmep]
-playlist_fim_de_semana = Playlist("Fim de semana", filmes_e_series)
+    filmes_e_series = [vingadores, peakyblinders, tmep]
+    playlist_fim_de_semana = Playlist("Fim de semana", filmes_e_series)
 
-print("Tamanho do playlist: {} programas".format(playlist_fim_de_semana.tamanho), end = "\n\n")
+    print("Tamanho do playlist: {} programas".format(playlist_fim_de_semana.tamanho), end = "\n\n")
 
-for programa in playlist_fim_de_semana.listagem:
-    print(programa, end="\n\n")
+    for programa in playlist_fim_de_semana.listagem:
+        print(programa, end="\n\n")
 
-print(demolidor in playlist_fim_de_semana.listagem, end="\n")
+    print(demolidor in playlist_fim_de_semana.listagem, end="\n")
 
