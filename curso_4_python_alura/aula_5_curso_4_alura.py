@@ -78,9 +78,8 @@ class Playlist:
     def __getitem__(self, item):
         return self._playlist[item]
 
-
     def __len__(self):
-       return len(self._playlist)
+        return len(self._playlist)
 
     @property
     def listagem(self):
