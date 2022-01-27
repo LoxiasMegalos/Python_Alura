@@ -31,7 +31,10 @@ def jogar():
     else:
         total_de_rodadas = 5
 
-    for rodada in range(1, total_de_rodadas + 1):
+
+    #for rodada in range(1, total_de_rodadas + 1):
+    rodada = 1
+    while( rodada <= total_de_rodadas):
         print("rodada {} de {}".format(rodada, total_de_rodadas))
 
         chute_str = input("Digite um numero: ")
@@ -40,6 +43,7 @@ def jogar():
 
         if(chute < 1 or chute > 100):
             print("VOCE DEVE DIGITAR UM NUMERO ENTRE 1 E 100")
+            rodada += 1
             continue
 
         acertou = chute == numero_secreto
@@ -58,6 +62,10 @@ def jogar():
             pontos = pontos - pontos_perdidos
             if(rodada == total_de_rodadas):
                 print("VOCE NÃO ACERTOU O NUMERO SECRETO, ERA {}, E VOCE TERMINOU O JOGO COM {} PONTOS!". format(numero_secreto,pontos))
+            rodada += 1
 
 
     print("FIM DE JOGO!")
+
+if (__name__ == "__main__"):
+    jogar()

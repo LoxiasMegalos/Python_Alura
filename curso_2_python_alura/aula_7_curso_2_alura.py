@@ -10,6 +10,7 @@ def jogar():
     palavras = []
     for linha in arquivo:
         palavras.append(linha.strip().upper())
+
     arquivo.close()
 
     numero = random.randrange(0,len(palavras))

@@ -66,7 +66,9 @@ print(idades)
 
 #PROBLEMAS DA MUTABILIDADE DA LISTA
 
-def faz_processamento_de_visualização(lista = []):
+def faz_processamento_de_visualização(lista = None):
+    if(lista == None):
+        lista = []
     print(len(lista))
     lista.append(13)
 
