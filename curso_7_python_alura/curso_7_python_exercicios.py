@@ -66,3 +66,26 @@ print(numeros | numeros_i)
 print(numeros ^ numeros_i)
 print(5 in numeros_i)
 print(numeros - numeros_i)
+
+from collections import Counter
+
+#def proporcao_texto(texto):
+texto_2 = """
+Estava eu, estudando novamente o framework Laravel do mundo PHP - depois de algum tempo muito focado no Java e usando o Intellij como editor de código favorito – e percebi uma coisa: a utilização do debug não é bem explicada... vocês já perceberam isso? No meu caso, o debug foi, e é, imprescindível quando estou no Java. Portanto, partindo dessa percepção inicial, este artigo mostrará como podemos fazer debug da aplicação Laravel nos editores da Jetbrains. Bora lá?
+
+Alguns pontos importantes a serem destacados
+O primeiro ponto que é preciso destacar é que daqui em diante vamos nos referir aos editores Intellij Idea ou PHP Storm apenas como como “editor”, já que o que vamos abordar neste artigo funciona tanto para o Intellij Idea quanto para o PHP Storm.
+
+Outro ponto importante é que vamos precisar instalar apenas uma ferramenta no sistema operacional. Durante este artigo vamos utilizar o Linux, mais especificamente o Ubuntu 20.04, que é o sistema que utilizo atualmente, mas você pode utilizar os links abaixo, para realizar as instalações no Windows e ou no macOS respectivamente:
+"""
+def analisa_texto(texto):
+    aparicoes = Counter(texto.lower())
+    total_aparicoes = sum(aparicoes.values())
+
+    proporcao = [(letra, valor / total_aparicoes) for letra, valor in aparicoes.items()]
+    proporcao = Counter(dict(proporcao))
+    mais_comuns = proporcao.most_common(10)
+
+    for letra, valor in mais_comuns:
+        print("{} => {:.2f}%".format(letra, valor*100))
+
