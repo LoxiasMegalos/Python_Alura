@@ -45,3 +45,8 @@ class TelefonesBr:
             resposta.group(4)
         )
         return numero_formatado
+
+#telefone = "11943220607"
+
+#teste_class = TelefonesBr(telefone)
+#print(teste_class)
