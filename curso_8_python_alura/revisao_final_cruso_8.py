@@ -129,11 +129,24 @@ class Cep:
         return "{}-{}".format(self.cep[:5], self.cep[5:])
 
     def endereco(self):
-        #url = "https://viacep.com.br/ws/{}/json/".format(self.cep)
+        url = "https://viacep.com.br/ws/{}/json/".format(self.cep)
         r = requests.get(url)
         dados = r.json()
         #dados2 = r.text - lista de uma API
         return "Logradouro: {} | Bairro: {} | UF: {} | CEP: {}".format(dados["logradouro"],dados["bairro"], dados["uf"], dados["cep"])
+
+
+class Rastreio:
+
+    def __init__(self, codigo):
+        self.codigo = str(codigo)
+
+    def rastreia(self):
+        url = "https://correios.contrateumdev.com.br/api/{}".format(self.codigo)
+        r = requests.get(url)
+        dados = r.text
+        return dados
+
 
 
 #murillo = Data()
@@ -144,5 +157,8 @@ class Cep:
 #cep = Cep(25230590)
 #print(cep)
 
-murillo = Cep("09230590")
-print(murillo.endereco())
+#murillo = Cep("09230590")
+#print(murillo.endereco())
+
+codigo = Rastreio("ON931559908BR")
+print(codigo.rastreia())
