@@ -39,13 +39,15 @@ def time_calculator(tempo_inicio, tempo_adicional, dia_inicio = ""):
 
     #VERIFICA AS HORAS FINAIS E QUANTOS PERIODOS DE 12 HORAS PASSARAM
     horas_totais = horas_minutos + hora_inicio + hora_adicional
-
+    #print(horas_totais, "horas totais")
     if horas_totais < 12:
         hora_final = horas_totais
         trocas = 0
     else:
-        hora_final = 12 if horas_totais % 12 == 0 else horas_totais % 12
-        trocas = int((horas_totais/12))
+        hora_final = int(horas_totais/(horas_totais/12)) if horas_totais % 12 == 0 else horas_totais % 12
+        #print("a hora final é:", hora_final)
+        trocas = int(horas_totais/12) if hora_inicio % 12 != 0 or hora_adicional % 12 != 0 else int(horas_totais/12) -1
+        #print("são", trocas, "trocas")
 
 
     #VERIFICA QUANTOS DIAS PASSARAM COM A ADIÇÃO DE TEMPO
@@ -64,8 +66,9 @@ def time_calculator(tempo_inicio, tempo_adicional, dia_inicio = ""):
 
     #print(hora_final,":", minutos_finais, " ", periodo_final)
 
-    semana = ["seg","ter","quar","quin","sex","sab","dom"]
-    #dia_inicio = "seg"
+    semana = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+    dia_inicio = dia_inicio.lower().title()
+
 
     if(dia_inicio in semana):
         index = 0
